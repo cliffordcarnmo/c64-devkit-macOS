@@ -30,7 +30,9 @@ TABLE4ARGS=256 90 255 0 720 80 1 0
 all: luts compile crunch run
 
 clean:
-	$(CLEAN) $(CLEANARGS) $(BUILDPATH)/*
+	$(CLEAN) $(CLEANARGS) $(BUILDPATH)/buildreport
+	$(CLEAN) $(CLEANARGS) $(BUILDPATH)/out.prg
+	$(CLEAN) $(CLEANARGS) $(BUILDPATH)/symbols
 
 luts:
 	$(GENOSINEPATH)/$(GENOSINE) $(TABLE1ARGS) > $(TABLESPATH)/$(TABLE1)
